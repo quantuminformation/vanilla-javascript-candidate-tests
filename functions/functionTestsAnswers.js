@@ -1,4 +1,4 @@
-// Answer Task Pass the function into another function and call it
+// ✅ Task Pass the function into another function and call it
 
 function passMe () {
     console.log(`${arguments.callee.name} was called`)
@@ -10,7 +10,7 @@ function iCallFunctionsPassedToMe (somefunction) {
 
 iCallFunctionsPassedToMe(passMe)
 
-// Answer Task store the 3 functions in an array then iterate though them (using for and forEach)and call them
+// ✅ Task store the 3 functions in an array then iterate though them (using for and forEach)and call them
 
 function one () {
     console.log(`${arguments.callee.name} was called`)
@@ -26,3 +26,12 @@ for (var i = 0; i < arrayOfFunctions.length; i++) {
 }
 // alternate answer
 arrayOfFunctions.forEach(item => item())
+
+// ✅ Task call the someFunction from the context of obj
+
+someFunction = function () {
+    console.log(this)
+}
+someFunction() // will show window
+var obj = {foo: 1}
+someFunction.call(obj)

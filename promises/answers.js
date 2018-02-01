@@ -1,4 +1,4 @@
-// Answer Task call the promise and respond by logging the resolved value
+// ✅ Task call the promise and respond by logging the resolved value
 
 const promise1 = new Promise(
     function (resolve, reject) {
@@ -8,7 +8,7 @@ const promise1 = new Promise(
 
 promise1.then(value => console.log(value)).catch(error => console.log(error))
 
-// Task wait until both promises are resolved and process the result by logging the returned values
+// ✅ Task wait until both promises are resolved and process the result by logging the returned values
 
 function returns_a_Promise () {
     return new Promise(
